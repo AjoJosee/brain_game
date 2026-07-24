@@ -3,28 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrainBoost - Senior Brain Training</title>
+    <title>BrainBoost - Modern Cognitive Training & Mental Fitness Platform</title>
+    <meta name="description" content="Improve your memory, focus, processing speed, and mental math with science-backed brain training games and Node 24 mental age analytics.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div id="app">
+        <!-- Main Navbar Header -->
         <header>
-            <h1>BrainBoost</h1>
+            <div class="logo-container" onclick="showView('home')">
+                <span class="logo-icon">⚡</span>
+                <div class="logo-text">
+                    <h1>BrainBoost</h1>
+                    <span class="logo-sub">Node 24 Cognitive Engine</span>
+                </div>
+            </div>
+
             <nav>
-                <button id="btn-home" onclick="showView('home')">Home</button>
-                <button id="btn-dashboard" onclick="showView('dashboard')">Dashboard</button>
+                <button id="nav-home" class="nav-btn active" onclick="showView('home')">
+                    <span>🏠 Games</span>
+                </button>
+                <button id="nav-dashboard" class="nav-btn" onclick="showView('dashboard')">
+                    <span>📊 Dashboard</span>
+                </button>
+                <button id="nav-leaderboard" class="nav-btn" onclick="showView('leaderboard')">
+                    <span>🏆 Leaderboard</span>
+                </button>
+                <button id="btn-sound" class="nav-btn btn-icon-only" onclick="toggleSound()" title="Toggle Audio Synth">
+                    🔊 Sound On
+                </button>
+                <button id="btn-profile" class="nav-btn btn-profile" onclick="changeUsernamePrompt()" title="Change Username">
+                    👤 Profile
+                </button>
             </nav>
         </header>
 
+        <!-- Dynamic Main Content Area -->
         <main id="main-content">
-            <!-- Views will be injected here -->
+            <!-- View components injected here by main.js -->
         </main>
 
+        <!-- Footer -->
         <footer>
-            <p>&copy; 2026 BrainBoost for Seniors</p>
+            <div class="footer-content">
+                <p>&copy; 2026 <strong>BrainBoost</strong>. Powered by Node 24 & Native <code>node:sqlite</code> DatabaseSync.</p>
+            </div>
         </footer>
     </div>
-    <script src="js/storage.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="js/audio.js"></script>
+    <script src="js/api.js"></script>
     <script src="js/games.js"></script>
     <script src="js/main.js"></script>
 </body>

@@ -1,0 +1,4 @@
+node_modules/
+brainboost.db
+*.log
+.DS_Store
