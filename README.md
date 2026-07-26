@@ -1,3 +1,3 @@
-[Live Demo](https://wonderful-cliff-0cf1f4d00.7.azurestaticapps.net)
+[Live Demo](https://red-stone-0a7f66f10.7.azurestaticapps.net/)
 
 Link not working anymore 
